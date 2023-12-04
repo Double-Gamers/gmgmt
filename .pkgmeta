@@ -20,6 +20,11 @@ externals:
 
 ignore:
     - Libs/LibStub/tests
+    - Libs/LibDeflate/docs
+    - Libs/LibDeflate/examples
+    - Libs/LibDeflate/changelog.md
+    - Libs/LibDeflate/CONTRIBUTING.md
+    - Libs/LibDeflate/README.md
     - notes.txt
     - LICENSE
     - README.md
