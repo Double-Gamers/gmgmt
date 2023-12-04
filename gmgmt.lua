@@ -5,7 +5,7 @@ local LibDeflate = LibStub("LibDeflate")
 
 function gmgmt:OnEnable()
     self:RegisterComm("G.M.G.M.T")
-    gmgmt:Transmit("test")
+    gmgmt:Transmit("|cFFE6CC80G.M.G.M.T|r sagt: Hallo " .. UnitName("player"))
 end
 
 -- With compression (recommended):
