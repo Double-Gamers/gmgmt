@@ -1,3 +1,5 @@
+package-as: GMgmt
+
 externals:
   Libs/LibStub:
     url: https://repos.wowace.com/wow/libstub/trunk
@@ -11,3 +13,7 @@ externals:
   Libs/LibDeflate:
     url: https://github.com/SafeteeWoW/LibDeflate
     tag: latest
+
+
+ignore:
+    - Libs/LibStub/tests
