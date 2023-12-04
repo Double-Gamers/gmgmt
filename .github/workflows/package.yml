@@ -24,10 +24,9 @@ jobs:
       #CF_API_KEY: ${{ secrets.CF_API_KEY }}
       #WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
       #WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
-      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}  # "GITHUB_TOKEN" is a secret always provided to the workflow
-                                                 # for your own token, the name cannot start with "GITHUB_"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
 
-    # "steps" holds a list of all the steps needed to package and release our AddOn
     steps:
 
       # we first have to clone the AddOn project, this is a required step
@@ -39,3 +38,10 @@ jobs:
       # once cloned, we just run the GitHub Action for the packager project
       - name: Package and release
         uses: BigWigsMods/packager@v2
+
+      # cleanup
+      - name: Delete old Releases, keep 3
+        uses: dev-drprasad/delete-older-releases@v0.3.2
+        with:
+          keep_latest: 3
+          delete_tags: true
