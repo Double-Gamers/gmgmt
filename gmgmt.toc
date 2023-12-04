@@ -1,11 +1,16 @@
 ## Interface: 100200
 ## Version: @project-version@
-## Title: G.M.G.M.T
-## Notes: Double-Gamers - Onyxia-EU
+## Title: |cFFE6CC80G.M.G.M.T|r
+## Notes: |cFFE6CC80Guild Management Addon|r |cFFFF0000Double-Gamers|r - Onyxia-EU - Version: @project-version@
 ## Author: Taddie
+
+## DefaultState: Enabled
+## LoadOnDemand: 0
 
 ## X-License: MIT
 
 ## OptionalDeps: Ace3
+
+Libs\LibStub\LibStub.lua
 
 gmgmt.lua
