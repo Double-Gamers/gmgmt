@@ -1,1 +1,7 @@
+## Interface: 100200
+## Version: 1.0.0
+## Title: G.M.G.M.T
+## Notes: Double-Gamers - Onyxia-EU
+## Author: Taddie
 
+gmgmt.lua

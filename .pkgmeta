@@ -7,6 +7,9 @@ externals:
   Libs/AceSerializer-3.0:
     url: Lib/AceSerializer-3.0: https://repos.wowace.com/wow/ace3/mainline/trunk/AceSerializer-3.0
     tag: latest
+  Libs/AceAddon-3.0:
+    url: Lib/AceAddon-3.0: https://repos.wowace.com/wow/ace3/mainline/trunk/AceAddon-3.0
+    tag: latest
   Libs/AceComm-3.0:
     url: Lib/AceComm-3.0: https://repos.wowace.com/wow/ace3/mainline/trunk/AceComm-3.0
     tag: latest
