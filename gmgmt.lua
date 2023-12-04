@@ -1,6 +1,6 @@
--- Dependencies: AceAddon-3.0, AceComm-3.0, LibSerialize, LibDeflate
+-- Dependencies: AceAddon-3.0, AceComm-3.0, AceSerializer-3.0, LibDeflate
 gmgmt = LibStub("AceAddon-3.0"):NewAddon("G.M.G.M.T", "AceComm-3.0")
-local LibSerialize = LibStub("LibSerialize")
+local LibSerialize = LibStub("AceSerializer-3.0")
 local LibDeflate = LibStub("LibDeflate")
 
 function gmgmt:OnEnable()
