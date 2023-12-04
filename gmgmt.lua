@@ -5,6 +5,7 @@ local LibDeflate = LibStub("LibDeflate")
 
 function gmgmt:OnEnable()
     self:RegisterComm("G.M.G.M.T")
+    gmgmt:Transmit("test")
 end
 
 -- With compression (recommended):
