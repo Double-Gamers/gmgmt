@@ -20,3 +20,7 @@ externals:
 
 ignore:
     - Libs/LibStub/tests
+    - notes.txt
+    - LICENSE
+    - README.md
+    - CHANGELOG.md
