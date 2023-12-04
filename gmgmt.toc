@@ -1,7 +1,11 @@
 ## Interface: 100200
-## Version: 1.0.0
+## Version: @project-version@
 ## Title: G.M.G.M.T
 ## Notes: Double-Gamers - Onyxia-EU
 ## Author: Taddie
+
+## X-License: MIT
+
+## OptionalDeps: Ace3
 
 gmgmt.lua
