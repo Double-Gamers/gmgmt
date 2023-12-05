@@ -12,6 +12,10 @@
 
 ## OptionalDeps: Ace3
 
+## X-Curse-Project-ID: 946873
+## X-WoWI-ID: 26656
+## X-Wago-ID: BNBeQxGx
+
 embeds.xml
 
 gmgmt.lua
