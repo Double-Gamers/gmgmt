@@ -10,7 +10,7 @@
 
 ## X-License: MIT
 
-## OptionalDeps: Ace3
+## OptionalDeps: Ace3, WagoAnalytics
 
 ## X-Curse-Project-ID: 946873
 ## X-WoWI-ID: 26656

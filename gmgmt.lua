@@ -1,5 +1,6 @@
 -- Dependencies: AceAddon-3.0, AceComm-3.0, AceSerializer-3.0, LibDeflate
 gmgmt = LibStub("AceAddon-3.0"):NewAddon("G.M.G.M.T", "AceComm-3.0")
+local WagoAnalytics = LibStub("WagoAnalytics"):Register("BNBeQxGx")
 local LibSerialize = LibStub("AceSerializer-3.0")
 local LibDeflate = LibStub("LibDeflate")
 
@@ -8,7 +9,6 @@ function gmgmt:OnEnable()
     gmgmt:Transmit("|cFFE6CC80G.M.G.M.T|r sagt: Hallo " .. UnitName("player"))
 end
 
--- With compression (recommended):
 function gmgmt:Transmit(data)
     local serialized = LibSerialize:Serialize(data)
     local compressed = LibDeflate:CompressDeflate(serialized)
@@ -25,5 +25,6 @@ function gmgmt:OnCommReceived(prefix, payload, distribution, sender)
     if not success then return end
 
     -- Handle `data`
+    WagoAnalytics:IncrementCounter("triggered")
     print(data)
 end
