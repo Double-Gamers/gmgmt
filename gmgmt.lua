@@ -13,7 +13,7 @@ function gmgmt:Transmit(data)
     local serialized = LibSerialize:Serialize(data)
     local compressed = LibDeflate:CompressDeflate(serialized)
     local encoded = LibDeflate:EncodeForWoWAddonChannel(compressed)
-    self:SendCommMessage("G.M.G.M.T", encoded, "WHISPER", UnitName("player"))
+    self:SendCommMessage("G.M.G.M.T", encoded, "GUILD")
 end
 
 function gmgmt:OnCommReceived(prefix, payload, distribution, sender)
