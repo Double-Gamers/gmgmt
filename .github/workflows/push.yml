@@ -1,7 +1,5 @@
 name: Tag Commit
-
 # we need to let GitHub know _when_ we want to release, typically only when we NOT create a new tag.
-
 on:
   push:
     tags-ignore:
