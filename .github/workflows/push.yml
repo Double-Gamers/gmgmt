@@ -1,0 +1,43 @@
+# description of this workflow, can be anything you want
+name: New Tag
+
+# we need to let GitHub know _when_ we want to release, typically only when we NOT create a new tag.
+
+on:
+  push:
+
+jobs:
+    newtag:
+      runs-on: ubuntu-latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+      steps:
+      - name: Get Retail Version Number
+        id: vnum
+        run: |-
+          echo "VERSION_NUMBER=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq -r '.result.data[0].version_name')" > $GITHUB_OUTPUT
+
+      - name: Get Retail TOC
+        id: vtoc
+        run: |-
+          echo "VERSION_TOC=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq -r '.result.data[0].version_name' | sed 's![^.]*$!!' | sed 's/\./0/g' | sed 's/.$//')" > $GITHUB_OUTPUT
+      
+      - name: Generate release tag
+        id: generate_release_tag
+        uses: alexvingg/next-release-tag@v1.0.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_prefix: ${{steps.vtoc.outputs.VERSION_TOC}}.
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ steps.generate_release_tag.outputs.release_tag }}
+          release_name: ${{ steps.generate_release_tag.outputs.release_tag }}
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            event-type: my-new-release
