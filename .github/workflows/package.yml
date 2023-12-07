@@ -37,10 +37,8 @@ jobs:
 
       - name: Get Retail Version Number
         id: vnum
-        uses: senmu/download-json-property-action@v1.0.0
-        with:
-          url: 'https://blizztrack.com/api/manifest/wow/versions'
-          property_path: result.data.0.version_name
+        run: |-
+          echo "VERSION_NUMBER=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq '.result.data[0].version_name')" > $GITHUB_OUTPUT
 
       - name: Generate release tag
         id: generate_release_tag
