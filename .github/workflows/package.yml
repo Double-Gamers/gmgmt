@@ -43,7 +43,7 @@ jobs:
       - name: Get Retail TOC
         id: vtoc
         run: |-
-          echo "VERSION_TOC=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq -r '.result.data[0].version_name') | awk -F'|' '/^us/{print $6}' | sed 's![^.]*$!!' | sed 's/\./0/g' | sed 's/.$//'" > $GITHUB_OUTPUT
+          echo "VERSION_TOC=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq -r '.result.data[0].version_name' | sed 's![^.]*$!!' | sed 's/\./0/g' | sed 's/.$//')" > $GITHUB_OUTPUT
       
           
       - name: Generate release tag
@@ -51,7 +51,7 @@ jobs:
         uses: alexvingg/next-release-tag@v1.0.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag_prefix: ${{steps.vnum.outputs.VERSION_NUMBER}}.
+          tag_prefix: ${{steps.vtoc.outputs.VERSION_TOC}}.
 
       # once cloned, we just run the GitHub Action for the packager project
       #- name: Package and release
