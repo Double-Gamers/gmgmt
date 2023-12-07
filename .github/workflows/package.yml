@@ -60,8 +60,10 @@ jobs:
           release_name: ${{ steps.generate_release_tag.outputs.release_tag }}
 
       # once cloned, we just run the GitHub Action for the packager project
-      #- name: Package and release
-      #  uses: BigWigsMods/packager@v2
+      - name: Package and Deploy
+        uses: BigWigsMods/packager@v2
+        with:
+          args: -p 0 -w 0 -a 0
 
       # cleanup
       - name: Delete old Releases, keep 3
