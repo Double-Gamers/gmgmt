@@ -35,9 +35,23 @@ jobs:
         with:
           fetch-depth: 0  # gets entire git history, needed for automatic changelogs
 
+      - name: Get Retail Version Number
+        id: vnum
+        uses: senmu/download-json-property-action@v1.0.0
+        with:
+          url: 'https://blizztrack.com/api/manifest/wow/versions'
+          property_path: result.data.0.version_name
+
+      - name: Generate release tag
+        id: generate_release_tag
+        uses: alexvingg/next-release-tag@v1.0.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_prefix: ${{steps.vnum.outputs.prop}}.
+
       # once cloned, we just run the GitHub Action for the packager project
-      - name: Package and release
-        uses: BigWigsMods/packager@v2
+      #- name: Package and release
+      #  uses: BigWigsMods/packager@v2
 
       # cleanup
       - name: Delete old Releases, keep 3
