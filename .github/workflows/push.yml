@@ -13,11 +13,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
       steps:
-      - name: Get Retail Version Number
-        id: vnum
-        run: |-
-          echo "VERSION_NUMBER=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq -r '.result.data[0].version_name')" > $GITHUB_OUTPUT
-
       - name: Get Retail TOC
         id: vtoc
         run: |-
