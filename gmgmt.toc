@@ -3,6 +3,13 @@
 ## Title: |cFFE6CC80G.M.G.M.T|r
 ## Notes: |cFFE6CC80Guild Management Addon|r |cFFFF0000Double-Gamers|r - Onyxia-EU - Version: @project-version@
 ## Author: Taddie
+## X-Author-Guild: Double Gamers
+## X-Author-Server: Onyxia
+## X-Author-Faction: Horde
+## X-Credits: Jörg, Jenny, Kati, Xqs
+## X-Website: https://github.com/Double-Gamers/gmgmt
+## X-Email: doublegamers-gmgmt-addon@behead.de
+## X-Localizations: deDE
 ## IconTexture: Interface\AddOns\gmgmt\Media\icon
 
 ## DefaultState: Enabled
