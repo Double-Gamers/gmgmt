@@ -1,7 +1,8 @@
-## Interface: 100200
+## Interface: 100205
 ## Version: @project-version@
+## X-Date: @project-date-iso@
 ## Title: |cFFE6CC80G.M.G.M.T|r
-## Notes: |cFFE6CC80Guild Management Addon|r |cFFFF0000Double-Gamers|r - Onyxia-EU - Version: @project-version@
+## Notes: |cFFE6CC80Guild Management Addon|r |cFFFF0000Double-Gamers|r - Onyxia-EU
 ## Author: Taddie
 ## X-Author-Guild: Double Gamers
 ## X-Author-Server: Onyxia

@@ -28,18 +28,24 @@ externals:
   Libs/AceConfig-3.0:
     url: svn://svn.wowace.com/wow/ace3/mainline/trunk/AceConfig-3.0
     tag: latest
+  Libs/AceBucket-3.0:
+    url: svn://svn.wowace.com/wow/ace3/mainline/trunk/AceBucket-3.0
+    tag: latest
   Libs/LibDeflate:
     url: https://github.com/SafeteeWoW/LibDeflate
     tag: latest
   Libs/LibAboutPanel-2.0:
     url: https://github.com/Myrroddin/libaboutpanel-2.0
     tag: latest
+  Libs/LibSharedMedia-3.0:
+    url: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk
+    tag: latest
   Libs/WagoAnalytics:
     url: https://github.com/wagoio/WagoAnalyticsShim.git
     branch: main
 
 ignore:
-    - Libs/LibStub/tests
+    - Libs/*/tests
     - Libs/LibDeflate/docs
     - Libs/LibDeflate/examples
     - Libs/LibDeflate/changelog.md
