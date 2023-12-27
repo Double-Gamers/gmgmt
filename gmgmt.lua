@@ -1,5 +1,5 @@
 -- Dependencies: AceAddon-3.0, AceComm-3.0, AceSerializer-3.0, LibDeflate
-gmgmt = LibStub("AceAddon-3.0"):NewAddon("G.M.G.M.T", "AceComm-3.0","AceConsole-3.0", "AceEvent-3.0", "LibAboutPanel-2.0")
+gmgmt = LibStub("AceAddon-3.0"):NewAddon("G.M.G.M.T", "AceComm-3.0","AceConsole-3.0", "AceEvent-3.0", "LibAboutPanel-2.0","AceBucket-3.0")
 local WagoAnalytics = LibStub("WagoAnalytics"):Register("BNBeQxGx")
 local LibSerialize = LibStub("AceSerializer-3.0")
 local LibDeflate = LibStub("LibDeflate")
@@ -23,7 +23,7 @@ end
 
 function gmgmt:OnEnable()
     self:RegisterComm("G.M.G.M.T")
-    self:RegisterEvent("CALENDAR_UPDATE_PENDING_INVITES","RespondTo_CalendarUpdatePendingInvites")
+    self:RegisterBucketEvent("CALENDAR_UPDATE_PENDING_INVITES",1 ,"RespondTo_CalendarUpdatePendingInvites")
     --self:RegisterEvent("CALENDAR_UPDATE_EVENT_LIST","RespondTo_CalendarUpdatePendingInvites")
     --if ( not IsAddOnLoaded("Blizzard_Calendar") ) then UIParentLoadAddOn("Blizzard_Calendar") end
     gmgmt:QueryCalendar()
@@ -81,8 +81,8 @@ function gmgmt:RespondTo_CalendarUpdatePendingInvites()
 	--self:Print("Number of events/monthOffset = ", numEvents, monthOffset)
 	if ( numEvents == 0 ) then return end
 	
-	--self:Print("Laufende Ereignisse : ");
-	--for index = 1,numEvents do
+	self:Print("Laufende Ereignisse : ");
+	for index = 1,numEvents do
 		--title, hour, minute, calendarType, sequenceType, eventType, texture, modStatus, inviteStatus, invitedBy, difficulty, inviteType = C_Calendar.GetDayEvent(monthOffset, d.monthDay, index)
         --currEvent = C_Calendar.GetDayEvent(monthOffset, d.monthDay, index)
 		--self:Print("Title:", currEvent.title, "Start:", currEvent.startTime.hour..":"..currEvent.startTime.minute, "Calendar Type:", currEvent.calendarType, "Sequence Type:",currEvent.sequenceType, "Event Type:", currEvent.eventType, "Invite Status:", currEvent.inviteStatus, "Invited By:", currEvent.invitedBy, "Difficulty:", currEvent.difficulty, "Invite Type:", currEvent.inviteType);
@@ -93,7 +93,7 @@ function gmgmt:RespondTo_CalendarUpdatePendingInvites()
 				--self:Print("You have been invited or have not signed up or the invite is out");
 			--end
 		--end
-	--end
+	end
 
     --self:Print("Getting Number of Pending Invites")
 	numInvites = C_Calendar.GetNumPendingInvites()
