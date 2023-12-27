@@ -81,7 +81,7 @@ function gmgmt:RespondTo_CalendarUpdatePendingInvites()
 	--self:Print("Number of events/monthOffset = ", numEvents, monthOffset)
 	if ( numEvents == 0 ) then return end
 	
-	self:Print("Laufende Ereignisse : ");
+	--self:Print("Laufende Ereignisse : ");
 	for index = 1,numEvents do
 		--title, hour, minute, calendarType, sequenceType, eventType, texture, modStatus, inviteStatus, invitedBy, difficulty, inviteType = C_Calendar.GetDayEvent(monthOffset, d.monthDay, index)
         --currEvent = C_Calendar.GetDayEvent(monthOffset, d.monthDay, index)
