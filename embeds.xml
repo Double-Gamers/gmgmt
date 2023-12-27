@@ -17,6 +17,8 @@
 <Include file="Libs\LibAboutPanel-2.0\lib.xml"/>
 <Include file="Libs\LibSharedMedia-3.0\lib.xml"/>
 <Include file="Libs\AceSerializer-3.0\AceSerializer-3.0.xml"/>
+<Include file="Libs\AceDB-3.0\AceDB-3.0.xml"/>
+<Include file="Libs\AceDBOptions-3.0\AceDBOptions-3.0.xml"/>
 <Include file="Libs\LibDeflate\lib.xml"/>
 <!--@end-no-lib-strip@-->
 </Ui>

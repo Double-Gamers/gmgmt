@@ -3,6 +3,7 @@ gmgmt = LibStub("AceAddon-3.0"):NewAddon("G.M.G.M.T", "AceComm-3.0","AceConsole-
 local WagoAnalytics = LibStub("WagoAnalytics"):Register("BNBeQxGx")
 local LibSerialize = LibStub("AceSerializer-3.0")
 local LibDeflate = LibStub("LibDeflate")
+local db = LibStub("AceDB-3.0"):New("G.M.G.M.T", defaults, true)
 local day, monthOffset
 
 function gmgmt:OnInitialize()
@@ -12,6 +13,9 @@ function gmgmt:OnInitialize()
         args = {}
     }
     
+    -- Assuming `options` is your top-level options table and `self.db` is your database:
+    options.args.profiles = LibStub("AceDBOptions-3.0"):GetOptionsTable(db)
+
     -- support for LibAboutPanel-2.0
     options.args.aboutTab = self:AboutOptionsTable("gmgmt")
     options.args.aboutTab.order = -1 -- -1 means "put it last"
