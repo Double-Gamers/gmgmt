@@ -55,6 +55,7 @@ function gmgmt:OnCommReceived(prefix, payload, distribution, sender)
     WagoAnalytics:IncrementCounter("triggered")
     self:Print(data)
     local voiceID = C_TTSSettings.GetVoiceOptionID(0)
+    PlaySoundFile("Interface\\Addons\\gmgmt\\Media\\sfx\\announcement-sound-5-21465.mp3", "SFX")
     C_VoiceChat.SpeakText(voiceID, data, Enum.VoiceTtsDestination.LocalPlayback, 0, 100)
 end
 
