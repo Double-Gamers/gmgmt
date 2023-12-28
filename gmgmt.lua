@@ -23,6 +23,9 @@ function gmgmt:OnInitialize()
     -- Register your options with AceConfigRegistry
     self.optionsFrame = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("gmgmt", "G.M.G.M.T")
     LibStub("AceConfig-3.0"):RegisterOptionsTable("gmgmt", options, {"gmgmt", "gm"})
+
+    gmgmt:RegisterSharedMedia()
+
 end
 
 function gmgmt:OnEnable()
@@ -114,4 +117,26 @@ gmgmt:RegisterChatCommand("rnotify", "rnotify")
 
 function gmgmt:rnotify(input)
     gmgmt:Transmit(input,"RAID")
+end
+
+function gmgmt:RegisterSharedMedia()
+    local LSM = LibStub("LibSharedMedia-3.0")
+    local SOUND = LSM.MediaType.SOUND
+    LSM:Register(SOUND, "G.M.G.M.T: announcement-sound-2", [[Interface\Addons\gmgmt\Media\sfx\announcement-sound-2-21462.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: announcement-sound-3", [[Interface\Addons\gmgmt\Media\sfx\announcement-sound-3-21463.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: announcement-sound-5", [[Interface\Addons\gmgmt\Media\sfx\announcement-sound-5-21465.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: bingbong", [[Interface\Addons\gmgmt\Media\sfx\bingbong-42645.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: brace-yourself", [[Interface\Addons\gmgmt\Media\sfx\brace-yourself-for-impact-locutora-virtual-140333.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: call-to-attention", [[Interface\Addons\gmgmt\Media\sfx\call-to-attention-123107.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: did-you-see-that", [[Interface\Addons\gmgmt\Media\sfx\did-you-see-that-89154.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: go2", [[Interface\Addons\gmgmt\Media\sfx\go2-88814.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: header", [[Interface\Addons\gmgmt\Media\sfx\header-39344.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: infobleep", [[Interface\Addons\gmgmt\Media\sfx\infobleep-87963.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: positive-notification", [[Interface\Addons\gmgmt\Media\sfx\positive-notification-new-level-152480.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: quotcancelledquot", [[Interface\Addons\gmgmt\Media\sfx\quotcancelledquot-175693.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: ready-set-go", [[Interface\Addons\gmgmt\Media\sfx\ready-set-go-83272.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: sevendayslater", [[Interface\Addons\gmgmt\Media\sfx\sevendayslater-82332.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: short-success-sound", [[Interface\Addons\gmgmt\Media\sfx\short-success-sound-glockenspiel-treasure-video-game-6346.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: tannoy-announcement", [[Interface\Addons\gmgmt\Media\sfx\tannoy-announcement-jingle-94124.mp3]])
+    LSM:Register(SOUND, "G.M.G.M.T: victory-voiced", [[Interface\Addons\gmgmt\Media\sfx\victory-voiced-165989.mp3]])
 end
