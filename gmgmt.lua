@@ -36,7 +36,7 @@ function gmgmt:OnInitialize()
 end
 
 function gmgmt:DelayedImport()
-    local aura2bimported = "!WA:2!fw12UTTrt4iOMAew3uB1w3u30gcNg)hJMiKehhNEqT1urkXfw2Uu02PagGDj3LIBdj3n7U0XYxku83CtUXpc6Uc0R0JqEcgy0NG8iKl61Dxsz3dXbvaIC4WzNdFFZmSY21KUlv)U1xUwAnCn8tV0lcycmr4GcFewW48PCsOhCasGT9ySefLl2FJOijrvr0FSWiuwymtSjJMPcA2ADVwUJk9stwct8DvQuPQafQOSm5DCLkKqz5qZOkRGi9nzS1aLG2RhriNDEXyX))qmjipkYRpNiEqR12S9wR5O0p4IYfOBnqYjjjRILwVqMhq2JKP6QTMU)i)MR01ZVR3kUEo56GeWtq9jItmBtbrBMB3nBT2AUfAcEabLOIDZqPeP1H5zJtbRxQliIidLSTo10z)ZoussIkQtychmrg6CZBT4sd1U2L0ZuEwojmeUTJKEazg30CnGz5Ot1WzGRy5gMGKsJuGcLOdSr8OGXiDjwvTA1nREJ6lfiz5IqsanLZekxzO(avdkr14HL3BH7r4t39X5ibXUDEsI9oXufzOOixmaNBpblNp28U6C6SpVuUK5o3qflCVYA7cv(L45O4dVF9o1n)9gfj04rxLaPqvFzjf32OY44GUnDB1A9X08QzANv9iuUsBZg8cI2kiKLfr7zDikJMIm6Udy1gM2jJLrEobjn(MK1tfpXrynLASW3qWcjrFuSCGXgtWGgoPiAM(Sqd4RNa(g4BHv0It(V1m0CoAz4hrZIyIYaBDRCkEKt66pEVT36jlSCsTWzF610qJkHMPbJT8wB11BbVrLryQ00U4r2xn3vchgMlvSuZt8fIYZkAHV6cw26FcIkxKzBAg9jz7vVxkwduwKm8rYyeM9KFOeJV4zG3eMGF5)MN9ltm)qFuqGGShfPi(PO9NMBFkwX9v0uY4NQWN6VYPT46qsGzFHg4zMknChkwf7SI(r4CA0EExDxugMFZvn9XrOqYURGXA0z3EP9sv72HGPODLr7VBmbP5XRV4NV4TVD9u(IdWm)IZgdVLfmPf82NFE48)bmDqz4hvEZpMIjUM8ddVh8(LdysET735(D88BUvxVn643AB9kHbhtX1wcM95nJrk7oePe1JaZaFaCb4dHT4)6jyCHJUMTbslHBAKDHo7gnSN7vD)C2QyswHLMFx)6Bjjgv2irV8utszRbqTgQS0pNy6)IaTBue0tE9yAwjYjf608RHJH316yiW0YcZokxQ5WYkkgUO1lX91RtOH3BCzhdVdmf8Xw8Pnlc3J4vUIPddt(TZW)OtL3lfGD4Z)6Blsi9qH99Jsymrm8vAsFBnjXfeDRxXqIz0qpHeosMO5QaMsNZGJ2ii8F8(HOeEmAZ8ejbM8vF9GIJRyCNiwMIpvBb9a7VphHnRhS98G5MDgy6J0Bcn7ZmRD0G0LBdFQzhhmFX1)xX1RAUEQvS84kUXatqm7RAmEy6HLdtvHB4O0Na(cRbprV6zhbIpyNXcqtl4Svo1jTXGLgwcPMLDvHp5zWLcC2Wt3bbFPf)s)hJNXWThVGmytblLRCdpEDDv4ovHLH7EQLu4jLe0A0Jx2np5MlUr3fEK4N0np0O(oR1QTh)ZE9P842iFvSMsJzj4(JkrK)6tRd1FoJGlg9)5jH7zXN717Uug2xZyKFS2E)(d)Z)"
+    local aura2bimported = "!WA:2!TAv3UXTXvyVyTRqyDtTusDtCsJiuAuTsQeKTSSJmQs7YvRCu7UskCPKssfa9qodjNgsoJNz4kT6IEXIIgFJVrpc7DbWxTpc(jyGqqFa8JGUOx3ZqUY21w2bOOlWU7W5NZCoNVVVZH12DkP7YlSYclov2u4PWpC6NgWeyIWbf(DybJZVItk9OJqcSThJLQO8tqfQeMylUIYYLwI(BffjjQAJq5HW8BZO5QGMT20RL7OkB1KLYe)5A1QvxGclp1TDLkKqz5qZPkRGi4pzI1aLGghteYRnRy8W)5qmjOikYRpNi(YwT3E9DA7OGhCrfc0nhi5K00nWsRNklci9i5QUWUPhoYVzJUE(D9A465uaxsapf1NiCZrzePLB5wd(sckvL8SJUTGah1T72TA3(4I8XUG1Pqare5O0Dbxd8(hDSKKgvgN6jCWezOZnU5slpemJljUmP4KYq41DK0Jix1nRasBwoGRgEv9Ny5gMIKsZOafkfUwZWtcgNVRYv1RxF76lUWYbswHiKeqZ4mHYvgchOEqvwnzy1)TWXe(KDFqbsqSxVin1EVeQImuu6lMeNBSGvWhV9UGpDPNunUc5ERHkwyVQy79Q99jZqXhFVf6SG5R3OibKX6Qeif6DoTcIx3mLXWbDB62Q1MbHS8iAS1nlO4rozB(GE7UZbZDN0Jr50mKbWVT2AD9Ko5SCYtiiPXEK8yvYeNGby0SdFdOkKeWuy5aZEmxGEvNmenhoREv9xmH(pQ)t6gWWl)YZioCmlCOXa0kQ5iAEetu5bwJ5IBKd7Q(uHF6dN(uf5qvHGSNaX7WWe(72SDJoB7TLt7gn)lnwBTn82y3w6BzYj67O)C9fTCrP8eu9GmQqWej6lvt)Z0tOBw74aajXgR460U1MRPxum266pED9V1aX6zl)93v(71RycNb211VLjfjWm)4u2bjhddclKkwwIlqbYX87UHHegHcj73aJHOB)4S4m1(DiykAFz0H73JgQyI(Z3Jrdj45VXTxELpFLfY4lnamwPrUV(NBPVSL(x82ZQF7)LEYGQRq)U6F1GZWHPww)(6RP)a9hoQAv)ekeukAgbR94)qurEPe(6LkMFVng4fZzzdFOr2LZzV6Q2ZCVo3RJNFZD66Tvh)w7cvdMXwLqYl3P5Z8ZVJKyMYgjIlYGZjTbWcMHkRSZZ2QrP7tY7TqCM52SxT8sF2YccKMZTvIcs5CaoybF1VJvLQwYN6v9MZcodRdc43ZsFv9Vw)l1xr)BS4tAQs1J4vP)nG6JVGUd)6VriigGaC88PSyM(JEuGGPqksI(pa46UqQMliaXRK8AOS(orimXqGDEvYnSFT)Z3Q((WQGO0PTX2td8TBxhklkrkdMrsguExaMutF3r5Uh9TlT396lDr6vS0ZCTRQN8eOYKP(IPmqooiHqJtux0wVMLULL7buSk5I2pCEyvvknhklSJx7n2SfW3hHPstHtpGlpZNeoSkRzEIp3ZycvW)yy4LaRsK4s)JlBKj8p(fSMFLY0p0hfeii9OqK4NHoCsU95SlUVHao(PA8R8C)yhoCnae(uOReZi1d3ZeponGhlfvZQ)k(n(jfpjeaoeZV0klDRBz0m6UjVOy5FdiINEx9EgTIrCO3XiuEsZeKYUdrkrXKtX9HMl0W1gRKs0FJ(BbjZF))xsM)N1b6)Q(9hviH8BLNM8FZ317)4lW)GZnRxnac7p6rdoaQFAkvoyVXdCIy5k(vwxqpY(RkqytlcBpVkoN(nv47CVn5z32Qdmg20NAv9NQ)StKjim7GVUQaF9ZuuVGcb0o(JKPqDQaMYuqZ5vxFyzL7TlsLKxwGzwEq5XvmUErhtHB(mVEwygd7BeE3heqJDUVPY5(WlaTcoxA(4JcvbcPM(S1nItqkl(BatMg1hAASUhF6FcbssvZiOwqW2cwgxDUjYWXdcKWBWKhdvlk7ETzvJM7o6b3XTi9glTv35(o(N9691X0zFvcu6kHLI7pQkyF(RZneEDjcUuWbs8ww8zF9MlLeJc77hLYGgNt17h)6)d"
     local auraVersion = 1235
     if WeakAuras then
         if WeakAuras.IsLibsOK() then
@@ -159,13 +159,16 @@ function gmgmt:OnCommReceived(prefix, payload, distribution, sender)
     if not success then return end
 
     -- Handle `data`
-    WagoAnalytics:IncrementCounter("triggered")
-    self:Print(data)
-    local voiceID = C_TTSSettings.GetVoiceOptionID(0)
-    PlaySoundFile("Interface\\Addons\\gmgmt\\Media\\sfx\\announcement-sound-5-21465.mp3", "SFX")
-    C_VoiceChat.SpeakText(voiceID, data, Enum.VoiceTtsDestination.LocalPlayback, 0, 100)
-    if IsAddOnLoaded("WeakAuras") then
-        WeakAuras.ScanEvents("GMGMT_CUSTOM_EVENT", data)
+    if data.command == "gnotify " or data.command == "rnotify" then
+        data = data.data
+        WagoAnalytics:IncrementCounter("triggered")
+        self:Print(data)
+        local voiceID = C_TTSSettings.GetVoiceOptionID(0)
+        PlaySoundFile("Interface\\Addons\\gmgmt\\Media\\sfx\\announcement-sound-5-21465.mp3", "SFX")
+        C_VoiceChat.SpeakText(voiceID, data, Enum.VoiceTtsDestination.LocalPlayback, 0, 100)
+        if IsAddOnLoaded("WeakAuras") then
+            WeakAuras.ScanEvents("GMGMT_CUSTOM_EVENT", data)
+        end
     end
 end
 
@@ -221,13 +224,19 @@ end
 gmgmt:RegisterChatCommand("gnotify", "gnotify")
 
 function gmgmt:gnotify(input)
-    gmgmt:Transmit(input,"GUILD")
+    local send{}
+    send.command = "gnotify"
+    send.data = input
+    gmgmt:Transmit(send,"GUILD")
 end
 
 gmgmt:RegisterChatCommand("rnotify", "rnotify")
 
 function gmgmt:rnotify(input)
-    gmgmt:Transmit(input,"RAID")
+    local send{}
+    send.command = "rnotify"
+    send.data = input
+    gmgmt:Transmit(send,"RAID")
 end
 
 function gmgmt:RegisterSharedMedia()
