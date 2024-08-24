@@ -124,12 +124,12 @@ function gmgmt:OnEnable()
     self:RegisterComm("G.M.G.M.T")
     self:RegisterBucketEvent("CALENDAR_UPDATE_PENDING_INVITES",1 ,"RespondTo_CalendarUpdatePendingInvites")
     gmgmt:QueryCalendar()
-    if IsAddOnLoaded("WeakAuras") then
+    if C_AddOns.IsAddOnLoaded("WeakAuras") then
         self:ScheduleTimer("DelayedImport", 30)
     else
         self:Print("|cFFFF0000WeakAuras ist nicht geladen, bitte aktivieren!")
     end
-    if not (IsAddOnLoaded("BigWigs") or IsAddOnLoaded("DBM")) then
+    if not (C_AddOns.IsAddOnLoaded("BigWigs") or C_AddOns.IsAddOnLoaded("DBM")) then
         self:Print("|cFFFF0000BigWigs oder DBM sind nicht geladen, bitte aktivieren!")
     end
 end
@@ -155,7 +155,7 @@ function gmgmt:OnCommReceived(prefix, payload, distribution, sender)
     local voiceID = C_TTSSettings.GetVoiceOptionID(0)
     PlaySoundFile("Interface\\Addons\\gmgmt\\Media\\sfx\\announcement-sound-5-21465.mp3", "SFX")
     C_VoiceChat.SpeakText(voiceID, data, Enum.VoiceTtsDestination.LocalPlayback, 0, 100)
-    if IsAddOnLoaded("WeakAuras") then
+    if C_AddOns.IsAddOnLoaded("WeakAuras") then
         WeakAuras.ScanEvents("GMGMT_CUSTOM_EVENT", data)
     end
 end
