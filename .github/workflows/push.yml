@@ -16,7 +16,8 @@ jobs:
       - name: Get Retail TOC
         id: vtoc
         run: |-
-          echo "VERSION_TOC=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq -r '.result.data[0].version_name' | sed 's![^.]*$!!' | sed 's/\./0/g' | sed 's/.$//')" > $GITHUB_OUTPUT
+# echo "VERSION_TOC=$(curl -s "https://blizztrack.com/api/manifest/wow/versions" | jq -r '.result.data[0].version_name' | sed 's![^.]*$!!' | sed 's/\./0/g' | sed 's/.$//')" > $GITHUB_OUTPUT
+          echo "VERSION_TOC=$(head -n 1 gmgmt.toc | awk '{ print $NF }')" > $GITHUB_OUTPUT
       
       - name: Generate release tag
         id: generate_release_tag
