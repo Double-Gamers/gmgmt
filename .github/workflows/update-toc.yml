@@ -3,6 +3,8 @@ name: Update TOC Interface version(s)
 on:
   schedule:
     - cron: 0 12 * * *
+  workflow_dispatch:
+    branches: [ main ]
 
 jobs:
   run:
