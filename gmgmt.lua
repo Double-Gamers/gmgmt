@@ -4,6 +4,7 @@ gmgmt = LibStub("AceAddon-3.0"):NewAddon("G.M.G.M.T", "AceComm-3.0","AceConsole-
 local WagoAnalytics = LibStub("WagoAnalytics"):Register("BNBeQxGx")
 local LibSerialize = LibStub("AceSerializer-3.0")
 local LibDeflate = LibStub("LibDeflate")
+local openRaidLib = LibStub:GetLibrary("LibOpenRaid-1.0")
 local db = LibStub("AceDB-3.0"):New("G.M.G.M.T", defaults, true)
 local day, monthOffset
 
