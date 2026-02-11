@@ -125,11 +125,11 @@ function gmgmt:OnEnable()
     self:RegisterComm("G.M.G.M.T")
     self:RegisterBucketEvent("CALENDAR_UPDATE_PENDING_INVITES",1 ,"RespondTo_CalendarUpdatePendingInvites")
     gmgmt:QueryCalendar()
-    if C_AddOns.IsAddOnLoaded("WeakAuras") then
-        self:ScheduleTimer("DelayedImport", 30)
-    else
-        self:Print("|cFFFF0000WeakAuras ist nicht geladen, bitte aktivieren!")
-    end
+    --if C_AddOns.IsAddOnLoaded("WeakAuras") then
+    --    self:ScheduleTimer("DelayedImport", 30)
+    --else
+    --    self:Print("|cFFFF0000WeakAuras ist nicht geladen, bitte aktivieren!")
+    --end
     if not (C_AddOns.IsAddOnLoaded("BigWigs") or C_AddOns.IsAddOnLoaded("DBM")) then
         self:Print("|cFFFF0000BigWigs oder DBM sind nicht geladen, bitte aktivieren!")
     end

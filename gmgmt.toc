@@ -9,7 +9,7 @@
 ## X-Author-Faction: Horde
 ## X-Credits: Jörg, Jenny, Kati, Xqs
 ## X-Website: https://github.com/Double-Gamers/gmgmt
-## X-Email: doublegamers-gmgmt-addon@behead.de
+## X-Email: info@double-gamers.eu
 ## X-Localizations: deDE
 ## IconTexture: Interface\AddOns\gmgmt\Media\icon
 
