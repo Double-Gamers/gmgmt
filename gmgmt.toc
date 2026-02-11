@@ -1,4 +1,4 @@
-## Interface: 
+## Interface: 120001
 ## Version: @project-version@
 ## X-Date: @project-date-iso@
 ## Title: |cFFE6CC80G.M.G.M.T|r
