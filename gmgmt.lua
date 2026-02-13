@@ -155,7 +155,7 @@ function gmgmt:OnCommReceived(prefix, payload, distribution, sender)
     self:Print(data)
     local voiceID = C_TTSSettings.GetVoiceOptionID(0)
     PlaySoundFile("Interface\\Addons\\gmgmt\\Media\\sfx\\announcement-sound-5-21465.mp3", "SFX")
-    C_VoiceChat.SpeakText(voiceID, data, Enum.VoiceTtsDestination.LocalPlayback, 0, 100)
+    C_VoiceChat.SpeakText(voiceID, data, 1, 0, 100)
     if C_AddOns.IsAddOnLoaded("WeakAuras") then
         WeakAuras.ScanEvents("GMGMT_CUSTOM_EVENT", data)
     end
@@ -223,4 +223,5 @@ function gmgmt:RegisterSharedMedia()
     LSM:Register(SOUND, "G.M.G.M.T: tannoy-announcement", [[Interface\Addons\gmgmt\Media\sfx\tannoy-announcement-jingle-94124.mp3]])
     LSM:Register(SOUND, "G.M.G.M.T: victory-voiced", [[Interface\Addons\gmgmt\Media\sfx\victory-voiced-165989.mp3]])
     LSM:Register(BG, "G.M.G.M.T: Logo", [[Interface\Addons\gmgmt\Media\gfx\dg-logo.tga]])
+
 end
